@@ -52,7 +52,7 @@ module.exports = (sequelize, DataTypes) => {
       // Một product có thể có nhiều record trong bảng ProducWishlist
       Product.hasMany(models.ProductWishlist, {
         foreignKey: {
-          name:'product_id',
+          name:'product_id',  
           type:DataTypes.UUID
         }
       });

@@ -1,4 +1,5 @@
 const models = require('../models');
+const { getAllCategory } = require('../services/categoryServices')
 function save(req, res) {
     const category = {
         name: req.body.name
@@ -7,7 +8,7 @@ function save(req, res) {
         .then(result => {
             res.status(201).json({
                 message: "Category create successfully",
-                data:result
+                data: result
             })
         })
         .catch(error => {
@@ -18,7 +19,10 @@ function save(req, res) {
         })
 }
 
+const getAll = (req, res, next) => getAllCategory(req, res, next);
+
 module.exports = {
     save,
+    getAll
 }
 

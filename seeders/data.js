@@ -63,4 +63,50 @@ const provincesData = [
     { name: 'Hà Nội', type: 'Thành phố', latitude: 21.0285, longitude: 105.8542 },
     { name: 'Hồ Chí Minh', type: 'Thành phố', latitude: 10.8231, longitude: 106.6297 }
 ];
-module.exports = { provincesData };
+
+const usersData = [
+    {
+        name: "Hồ văn Đi",
+        // province_id: 'b9c7a265-61f0-4577-930d-9798c25c3290',
+        email: "di.ho24@student.passerellesnumeriques.org",
+        password: "di12345",
+        role: 'admin',
+    },
+    {
+        name: "A Thi",
+        // province_id: 'db8feef0-c18f-46b8-a639-f54b6a5d3811',
+        email: "thi.a24@student.passerellesnumeriques.org",
+        password: "thi12345",
+        role: 'admin',
+    },
+    {
+        name: "Hồ Thị Loan",
+        // province_id: 'b9c7a265-61f0-4577-930d-9798c25c3290',
+        email: "loan.ho24@student.passerellesnumeriques.org",
+        password: "loan12345",
+        role: 'admin',
+    },
+    {
+        name: "Hồ Thị Hương",
+        // province_id: 'b9c7a265-61f0-4577-930d-9798c25c3290',
+        email: "huong.ho24@student.passerellesnumeriques.org",
+        password: "huong12345",
+        role: 'admin',
+    },
+    {
+        name: "Cường",
+        // province_id: 'b9c7a265-61f0-4577-930d-9798c25c3290',
+        email: "cuong.a24@student.passerellesnumeriques.org",
+        password: "luong12345",
+        role: 'customer',
+    },
+    {
+        name: "Tâm",
+        // province_id: 'b9c7a265-61f0-4577-930d-9798c25c3290',
+        email: "tam.vo24@student.passerellesnumeriques.org",
+        password: "tam12345",
+        role: 'customer',
+    },
+]
+
+module.exports = { provincesData, usersData };

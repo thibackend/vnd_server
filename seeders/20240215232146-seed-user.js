@@ -1,16 +1,26 @@
 'use strict';
-const { Province } = require('../models');
-const { provincesData } = require('./data');
+const { User } = require('../models');
+const { usersData } = require('./data');
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await Province.findAll()
+    /**
+     * Add seed commands here.
+     *
+     * Example:
+     * await queryInterface.bulkInsert('People', [{
+     *   name: 'John Doe',
+     *   isBetaMember: false
+     * }], {});
+    */
+
+    await User.findAll()
       .then(result => {
-        if (result.length == 0) {
-          Province.bulkCreate(provincesData);
+        if (!result) {
+          User.bulkCreate(usersData);
         }
         else {
-          console.log("province already seeded!")
+          console.log("User already seeded!")
         }
       })
       .catch(res => {

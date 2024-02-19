@@ -4,5 +4,6 @@ const categoryCtl = require('../controllers/categoryCtl');
 
 
 router.post('/',categoryCtl.save); 
+router.get('/', categoryCtl.getAll)
 
 module.exports = router;

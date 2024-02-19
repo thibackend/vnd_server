@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
     cart_id: DataTypes.UUID,
     product_id: DataTypes.UUID,
     quantity: DataTypes.INTEGER,
+    status:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'ProductCart',

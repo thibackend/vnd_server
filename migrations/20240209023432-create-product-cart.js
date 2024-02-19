@@ -14,6 +14,7 @@ module.exports = {
         type: Sequelize.UUID
       },
       quantity: Sequelize.INTEGER,
+      status:Sequelize.STRING,
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

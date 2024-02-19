@@ -1,8 +1,7 @@
-const getAll = (req, res, next) => {
-    res.status(200).json({
-        message: "Get All list items!"
-    })
-}
+const { createProduct, getAllProduct } = require('../services/productServices')
+
+const create = (req, res, next) => createProduct(req, res, next);
+const getAll = (req, res, next) => getAllProduct(req, res, next);
 
 const getOne = (req, res, next) => {
     const data = req.body;
@@ -12,11 +11,6 @@ const getOne = (req, res, next) => {
     })
 }
 
-const createProduct = (req, res, next) => {
-    res.status(200).json({
-        message: "create product"
-    })
-}
 
 const updateProduct = (req, res, next) => {
     res.status(200).json({
@@ -32,7 +26,7 @@ const deleteProduct = (req, res, next) => {
 module.exports = {
     getAll,
     getOne,
-    createProduct,
+    create,
     updateProduct,
     deleteProduct
 }

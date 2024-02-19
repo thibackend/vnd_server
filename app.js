@@ -1,9 +1,9 @@
 const express = require('express');
 const runRouters = require('./routes');
-const Utils = require('./utils.config');
+const { Dependencies } = require('./utils/dependencies');
 const app = express();
 
-Utils(app);
+Dependencies(app);
 runRouters(app);
 
 module.exports = app;

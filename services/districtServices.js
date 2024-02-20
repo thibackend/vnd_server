@@ -11,7 +11,6 @@ const createDistrict = async (req, res, next) => {
             error: error
         })
     }
-
 }
 
 module.exports = {

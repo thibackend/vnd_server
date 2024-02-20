@@ -1,6 +1,7 @@
-const { createProduct, getAllProduct } = require('../services/productServices')
+const { createProduct, getAllProduct, updateProduct } = require('../services/productServices')
 
 const create = (req, res, next) => createProduct(req, res, next);
+const update = (req, res, next) => updateProduct(req, res, next);
 const getAll = (req, res, next) => getAllProduct(req, res, next);
 
 const getOne = (req, res, next) => {
@@ -24,9 +25,9 @@ const deleteProduct = (req, res, next) => {
 }
 
 module.exports = {
+    create,
+    update,
     getAll,
     getOne,
-    create,
-    updateProduct,
     deleteProduct
 }

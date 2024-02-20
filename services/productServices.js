@@ -19,6 +19,10 @@ const createProduct = async (req, res, next) => {
         .catch(error => resInternalError(res, error));
 }
 
+const updateProduct = async (req, res, next) => {
+    
+}
+
 const getAllProduct = async (req, res, next) => {
     await Product.findAll({
         include: [

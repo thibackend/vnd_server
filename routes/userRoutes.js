@@ -8,6 +8,6 @@ Router.post('/',userCtl.create);
 Router.get('/',userCtl.getAll);
 // Router.get('/:id',userCtl.getOne);
 // Router.patch('/:id',userCtl.update);
-// Router.delete('/:id',userCtl.remove)
+// Router.delete('/:id',userCtl.remove);
 
 module.exports = Router;
